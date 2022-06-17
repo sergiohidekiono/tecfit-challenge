@@ -1,0 +1,32 @@
+.background {
+    background-image: url("../../../assets/images/login.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.wrap-login {
+    // border: 1px solid #d8d8d8;
+    // border-radius: 10px;
+    position: absolute;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.remember-access {
+    margin-left: 5px;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+a {
+    color: #3155c7 !important;
+    cursor: pointer;
+}

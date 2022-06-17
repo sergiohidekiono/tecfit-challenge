@@ -1,0 +1,107 @@
+<div class="background">
+  <div class="col-12">
+    <div class="col-8"></div>
+    <div class="col-3 col-offset-4 wrap-login">
+      <div class="card p-5">
+        <form class="mt-2 login-validation" [formGroup]="loginFormGroup" (ngSubmit)="login()">
+          <div>
+            <div class="col-12">
+              <div class="col-12">
+                <img src="../../assets/images/logo.svg" alt="logo" width="150" />
+                <hr />
+                <div>
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control form-control-sm" name="email" formControlName="email"
+                    placeholder="michael.lawson@reqres.in" required />
+                  <div class="invalid-feedback">
+                    <span class="text-danger">E-mail é obrigatório.</span>
+                  </div>
+                </div>
+                <div>
+                  <label class="col col-form-label">Password</label>
+                  <input type="password" class="form-control form-control-sm" name="password" formControlName="password"
+                    required />
+                  <div class="invalid-feedback">
+                    <span class="text-danger">Senha é obrigatório.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-3 d-flex justify-content-between">
+            <span>
+              <input class="form-check-input" id="checkfield" type="checkbox" required>
+              <label class="form-check-label remember-access">Lembrar o Acesso</label>
+            </span>
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Esqueceu a senha?</a>
+          </div>
+          <button class="col-4 btn btn-primary btn-sm mt-4" type="submit">Entrar</button>
+        </form>
+
+        <div class="pt-4 d-flex justify-content-between">
+          <hr style="width: 35%;">
+          <span class="bold">Registrar-se</span>
+          <hr style="width: 35%;">
+        </div>
+
+        <form class="mt-2" [formGroup]="registerFormGroup" (ngSubmit)="register()">
+          <div>
+            <div class="col-12">
+              <div class="col-12">
+                <div>
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control form-control-sm" name="emailAux" formControlName="email"
+                    placeholder="michael.lawson@reqres.in" required />
+                  <div class="invalid-feedback">
+                    <span class="text-danger">E-mail é obrigatório.</span>
+                  </div>
+                </div>
+                <div>
+                  <label class="col col-form-label">Password</label>
+                  <input type="password" class="form-control form-control-sm" name="passwordAux"
+                    formControlName="password" required />
+                  <div class="invalid-feedback">
+                    <span class="text-danger">Senha é obrigatório.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="col-4 btn btn-primary btn-sm mt-4" type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Recuperar senha</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Para que consiga recuperar sua senha, você deve informar seu e-mail.
+        <form class="mt-2" [formGroup]="recoveryPasswordFormGroup" (ngSubmit)="recoveryPassword()">
+          <div>
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control form-control-sm" name="emailAux" formControlName="email"
+              placeholder="michael.lawson@reqres.in" required />
+            <div class="invalid-feedback"
+              [ngClass]="{'invalid-feedback': !recoveryPasswordControlForm['email'].invalid && !recoveryPasswordControlForm['email'].errors && (!recoveryPasswordControlForm['email'].dirty || !recoveryPasswordControlForm['email'].touched) && !recoveryPasswordControlForm['email'].hasError('required')}">
+              <span class="text-danger">E-mail é obrigatório.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary btn-sm" [disabled]="!recoveryPasswordFormGroup.valid"
+          (click)="recoveryPassword()">Recuperar</button>
+      </div>
+    </div>
+  </div>
+</div>

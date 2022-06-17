@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: false,
+  endPoints: {
+    login: 'https://reqres.in/api',
+  }
 };
