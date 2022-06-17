@@ -9,12 +9,10 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+@Injectable({ providedIn: 'root' })
 
-
-@Injectable({
-  providedIn: 'root',
-})
 export class CoreService {
+
   constructor(private httpClient: HttpClient) { }
 
   login(payload: any): Observable<any> {
@@ -29,7 +27,4 @@ export class CoreService {
     return this.httpClient.post<any>(`${endPoint}/register`, payload, httpOptions);
   }
 
-  listUsers(perPage: string): Observable<any> {
-    return this.httpClient.get<any>(`${endPoint}/users?per_page=${perPage}`, httpOptions);
-  }
 }

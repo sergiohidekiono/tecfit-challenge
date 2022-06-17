@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <ul class="d-flex col-12 justify-content-end">
+    <li class="menu" *ngFor="let menu of menuList">
+      <a class="nav-link" [href]="menu.link">{{menu.description}}</a>
+    </li>
+  </ul>
+</div>

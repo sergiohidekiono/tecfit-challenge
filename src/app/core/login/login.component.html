@@ -7,20 +7,19 @@
           <div>
             <div class="col-12">
               <div class="col-12">
-                <img src="../../assets/images/logo.svg" alt="logo" width="150" />
+                <img src="../../../assets/images/login/logo.svg" alt="logo" width="150" />
                 <hr />
                 <div>
-                  <label class="form-label">Email address</label>
-                  <input type="email" class="form-control form-control-sm" name="email" formControlName="email"
+                  <label class="form-label">E-mail</label>
+                  <input type="email" class="form-control form-control-sm" formControlName="email"
                     placeholder="michael.lawson@reqres.in" required />
                   <div class="invalid-feedback">
                     <span class="text-danger">E-mail é obrigatório.</span>
                   </div>
                 </div>
                 <div>
-                  <label class="col col-form-label">Password</label>
-                  <input type="password" class="form-control form-control-sm" name="password" formControlName="password"
-                    required />
+                  <label class="col col-form-label">Senha</label>
+                  <input type="password" class="form-control form-control-sm" formControlName="password" required />
                   <div class="invalid-feedback">
                     <span class="text-danger">Senha é obrigatório.</span>
                   </div>
@@ -49,17 +48,16 @@
             <div class="col-12">
               <div class="col-12">
                 <div>
-                  <label class="form-label">Email address</label>
-                  <input type="email" class="form-control form-control-sm" name="emailAux" formControlName="email"
+                  <label class="form-label">E-mail</label>
+                  <input type="email" class="form-control form-control-sm" formControlName="email"
                     placeholder="michael.lawson@reqres.in" required />
                   <div class="invalid-feedback">
                     <span class="text-danger">E-mail é obrigatório.</span>
                   </div>
                 </div>
                 <div>
-                  <label class="col col-form-label">Password</label>
-                  <input type="password" class="form-control form-control-sm" name="passwordAux"
-                    formControlName="password" required />
+                  <label class="col col-form-label">Senha</label>
+                  <input type="password" class="form-control form-control-sm" formControlName="password" required />
                   <div class="invalid-feedback">
                     <span class="text-danger">Senha é obrigatório.</span>
                   </div>
@@ -84,23 +82,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Para que consiga recuperar sua senha, você deve informar seu e-mail.
+        Informe seu e-mail que deseja recuperar a senha.
         <form class="mt-2" [formGroup]="recoveryPasswordFormGroup" (ngSubmit)="recoveryPassword()">
           <div>
-            <label class="form-label">Email address</label>
-            <input type="email" class="form-control form-control-sm" name="emailAux" formControlName="email"
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-control form-control-sm" formControlName="email"
               placeholder="michael.lawson@reqres.in" required />
-            <div class="invalid-feedback"
-              [ngClass]="{'invalid-feedback': !recoveryPasswordControlForm['email'].invalid && !recoveryPasswordControlForm['email'].errors && (!recoveryPasswordControlForm['email'].dirty || !recoveryPasswordControlForm['email'].touched) && !recoveryPasswordControlForm['email'].hasError('required')}">
+            <div class="invalid-feedback">
               <span class="text-danger">E-mail é obrigatório.</span>
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary btn-sm" [disabled]="!recoveryPasswordFormGroup.valid"
-          (click)="recoveryPassword()">Recuperar</button>
+        <button type="button" class="col-4 btn btn-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="col-4 btn btn-primary btn-sm" (click)="recoveryPassword()">Recuperar</button>
       </div>
     </div>
   </div>

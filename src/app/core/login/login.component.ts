@@ -25,11 +25,11 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]],
     });
     this.registerFormGroup = this.formBuilder.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
     this.recoveryPasswordFormGroup = this.formBuilder.group({
-      email: ['', [Validators.required]]
+      email: ['', [Validators.required, Validators.email]]
     });
   }
 
@@ -53,7 +53,6 @@ export class LoginComponent implements OnInit {
     'use strict'
     var forms = document.querySelectorAll('.login-validation')
 
-    // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
       .forEach((form) => {
         form.addEventListener('submit', function (event: any) {
@@ -61,11 +60,9 @@ export class LoginComponent implements OnInit {
             event.preventDefault()
             event.stopPropagation()
           }
-
           form.classList.add('was-validated')
         }, false)
       });
-
   }
 
   login() {
@@ -109,18 +106,8 @@ export class LoginComponent implements OnInit {
   }
 
   recoveryPassword() {
-    this.sharedService.showSuccessAdd(`Por favor, verifique a caixa de entrada: <b>${this.recoveryPasswordControlForm['email'].value}</b>`);
+    this.recoveryPasswordFormGroup.valid
+      ? this.sharedService.showSuccessAdd(`Por favor, verifique a caixa de entrada: <b>${this.recoveryPasswordControlForm['email'].value}</b>`)
+      : this.sharedService.showErrorAdd(`A informação não corresponde a um tipo de e-mail: <b>${this.recoveryPasswordControlForm['email'].value}</b>`);
   }
-
-  //   const payload = '100';
-  //   this.coreService.listUsers(payload).subscribe({
-  //     next: (res) => {
-  //       console.log('RES:', res)
-  //       const users = res.data;
-
-
-  //     },
-  //     error: (err) => { },
-  //     complete: () => { }
-  //   })
 }
