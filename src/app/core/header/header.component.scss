@@ -1,6 +1,6 @@
 .container-fluid {
-    color: white;
-    padding: 80px;
+    color: #ffc63e;
+    padding: 40px;
 }
 
 .menu {
@@ -9,6 +9,20 @@
 }
 
 li {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
+}
+
+::ng-deep a.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #FF9900;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }

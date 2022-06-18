@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports: [
         HttpClientModule,
-        ReactiveFormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         HttpClientModule,

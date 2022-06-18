@@ -15,7 +15,7 @@ export class UserService {
 
     constructor(private httpClient: HttpClient) { }
 
-    listUsers(perPage: string): Observable<any> {
+    getUsers(perPage: string): Observable<any> {
         return this.httpClient.get<any>(`${endPoint}/users?per_page=${perPage}`, httpOptions);
     }
 }

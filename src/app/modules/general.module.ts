@@ -12,9 +12,9 @@ import { UserComponent } from './users/user.component';
         UserComponent
     ],
     imports: [
+        CommonModule,
         SharedModule,
-        CoreModule,
-        CommonModule
+        CoreModule
     ],
     exports: []
 })

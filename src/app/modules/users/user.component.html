@@ -1,10 +1,30 @@
 <div class="background">
   <app-header></app-header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-      </div>
+  <div class="p-5">
+    <p class="h2">Nossos Colaboradores</p>
+    <hr>
+    <div class="row pt-5">
+      <span class="col-4 p-0 m-3" style="border-radius: 10px; background: grey; max-width: 450px;"
+        *ngFor="let user of users?.data">
+        <div class="row g-0">
+          <div class="col-md-4 profile"
+            [ngStyle]="{background: 'url('+user.avatar +')', backgroundSize: 'cover', backgroundPosition: 'center'}">
+          </div>
+          <div class="col-md-8 p-2">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+              <p class="card-text">E-mail: <b>{{user.email}}</b></p>
+              <hr>
+              <span style="font-size: x-large;">
+                <a class="fa-brands fa-facebook-square cursor" href="https://www.facebook.com" target="_blank"></a>
+                <a class="fa-brands fa-twitter-square cursor" style="margin: 0 10px;" href="https://www.twitter.com"
+                  target="_blank"></a>
+                <a class="fa-brands fa-linkedin cursor" href="https://www.linkedin.com" target="_blank"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </span>
     </div>
   </div>
 </div>

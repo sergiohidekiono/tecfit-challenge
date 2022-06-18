@@ -1,7 +1,10 @@
 <div class="container-fluid">
-  <ul class="d-flex col-12 justify-content-end">
-    <li class="menu" *ngFor="let menu of menuList">
-      <a class="nav-link" [href]="menu.link">{{menu.description}}</a>
-    </li>
+  <ul class="d-flex col-12 justify-content-between">
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" [ngStyle]="{'cursor': 'pointer'}"/>
+    <span class="d-flex">
+      <li class="menu" *ngFor="let menu of menuList" style="align-self: end;">
+        <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
+      </li>
+    </span>
   </ul>
 </div>

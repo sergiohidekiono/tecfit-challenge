@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,12 +10,15 @@ export class HeaderComponent implements OnInit {
 
   menuList: any = [
     { id: 1, description: 'Home', link: '/home' },
-    { id: 2, description: 'Usuários', link: '/user' },
+    { id: 2, description: 'Colaboradores', link: '/user' },
     { id: 3, description: 'Sobre', link: '/about' }
   ];
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() { }
 
+  redirect(){
+    this.route.navigateByUrl('/home');
+  }
 }
