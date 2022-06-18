@@ -1,5 +1,5 @@
 .container-fluid {
-    color: #ffc63e;
+    color: #6d6d6d;
     padding: 40px;
 }
 
@@ -13,6 +13,15 @@ li {
     font-weight: bold;
 }
 
+.profile-image {
+    width: 100px;
+    border-radius: 10px;
+}
+
+a {
+    color: #3155C7 !important;
+}
+
 ::ng-deep a.hvr-underline-from-center:before {
     content: "";
     position: absolute;
@@ -20,9 +29,19 @@ li {
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #FF9900;
+    background: #3155C7;
     height: 2px;
     transition-property: left, right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+}
+
+@media screen and (max-width: 425px) {
+    .container-fluid {
+        padding: 20px;
+    }
+
+    img {
+        width: 30%;
+    }
 }

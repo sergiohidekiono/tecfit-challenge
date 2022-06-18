@@ -7,3 +7,9 @@
     z-index: -1;
     color: white;
 }
+
+@media screen and (max-width: 425px) {
+    .profile-image {
+        border-radius: 10px;
+    }
+}

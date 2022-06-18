@@ -1,6 +1,7 @@
 <div class="container-fluid">
-  <ul class="d-flex col-12 justify-content-between">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" [ngStyle]="{'cursor': 'pointer'}"/>
+  <ul class="d-flex justify-content-between">
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
+      [ngStyle]="{'cursor': 'pointer'}" />
     <span class="d-flex">
       <li class="menu" *ngFor="let menu of menuList" style="align-self: end;">
         <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
@@ -8,3 +9,38 @@
     </span>
   </ul>
 </div>
+
+<nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
+      [ngStyle]="{'cursor': 'pointer'}" />
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" />
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex">
+          <div class="d-flex">
+            <div>
+              <img class="profile-image" [src]="profile?.avatar" alt="profile man">
+            </div>
+            <div class="pl-2 offset-1">
+              Olá, <small class="h-4 bold">{{profile?.name}}</small>!<br><br>
+              E-mail:<small class="bold"> {{profile?.email}}</small>
+              Cargo:<small class="bold"> {{profile?.role}}</small>
+            </div>
+          </div>
+          <hr style="width:100%">
+          <li class="menu p-0" *ngFor="let menu of menuList" style="align-self: end;">
+            <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -73,6 +73,7 @@ export class LoginComponent implements OnInit {
 
     this.coreService.login(payload).subscribe({
       next: () => {
+        sessionStorage.setItem('email', this.loginControlForm['email'].value);
         this.sharedService.showSuccessAdd(`Bem vindo de volta <b>${this.loginControlForm['email'].value.split('.')[0]}</b>, pronto pra treinar?`);
         this.router.navigate(['home']);
       },
