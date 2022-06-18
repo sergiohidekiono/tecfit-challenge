@@ -1,48 +1,44 @@
 <div class="background">
   <div class="col-12">
     <div class="col-8"></div>
-    <div class="col-3 col-offset-4 wrap-login">
+    <div class="col-xxl-3 wrap-login">
       <div class="card p-5">
         <form class="mt-2 login-validation" [formGroup]="loginFormGroup" (ngSubmit)="login()">
           <div>
             <div class="col-12">
-              <div class="col-12">
-                <img src="../../../assets/images/login/logo.svg" alt="logo" width="150" />
-                <hr />
-                <div>
-                  <label class="form-label">E-mail</label>
-                  <input type="email" class="form-control form-control-sm" formControlName="email"
-                    placeholder="michael.lawson@reqres.in" required />
-                  <div class="invalid-feedback">
-                    <span class="text-danger">E-mail é obrigatório.</span>
-                  </div>
+              <img src="../../../assets/images/login/logo.svg" alt="logo" width="150" />
+              <hr />
+              <div>
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control form-control-sm" formControlName="email"
+                  placeholder="michael.lawson@reqres.in" required />
+                <div class="invalid-feedback">
+                  <span class="text-danger">E-mail é obrigatório.</span>
                 </div>
-                <div>
-                  <label class="col col-form-label">Senha</label>
-                  <input type="password" class="form-control form-control-sm" formControlName="password" required />
-                  <div class="invalid-feedback">
-                    <span class="text-danger">Senha é obrigatório.</span>
-                  </div>
+              </div>
+              <div>
+                <label class="col col-form-label">Senha</label>
+                <input type="password" class="form-control form-control-sm" formControlName="password" required />
+                <div class="invalid-feedback">
+                  <span class="text-danger">Senha é obrigatório.</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="pt-3 d-flex justify-content-between">
             <span>
-              <input class="form-check-input" id="checkfield" type="checkbox" required>
+              <input id="checkfield" type="checkbox" required>
               <label class="form-check-label remember-access">Lembrar o Acesso</label>
             </span>
             <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Esqueceu a senha?</a>
           </div>
           <button class="col-4 btn btn-primary btn-sm mt-4" type="submit">Entrar</button>
         </form>
-
         <div class="pt-4 d-flex justify-content-between">
           <hr style="width: 35%;">
           <span class="bold">Registrar-se</span>
           <hr style="width: 35%;">
         </div>
-
         <form class="mt-2" [formGroup]="registerFormGroup" (ngSubmit)="register()">
           <div>
             <div class="col-12">
