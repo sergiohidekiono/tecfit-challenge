@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   registerFormGroup: FormGroup;
   recoveryPasswordFormGroup: FormGroup;
   isLoading: boolean = false;
+  isRememberAccess: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -36,6 +37,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.validation();
+    sessionStorage.getItem('remeberAccess') === 'true' ? this.login() : '';
+
   }
 
   get loginControlForm() {
@@ -75,6 +78,7 @@ export class LoginComponent implements OnInit {
     this.coreService.login(payload).subscribe({
       next: () => {
         sessionStorage.setItem('email', this.loginControlForm['email'].value);
+        sessionStorage.setItem('remeberAccess', this.isRememberAccess.toString());
         this.sharedService.showSuccessAdd(`Bem vindo de volta <b>${this.loginControlForm['email'].value.split('.')[0]}</b>, pronto pra treinar?`);
         this.router.navigate(['home']);
       },
@@ -88,6 +92,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  rememberAccess(e: any) {
+    this.isRememberAccess = e.currentTarget.checked;
+  }
+
   register() {
     const payload = {
       email: this.registerControlForm['email'].value,
@@ -96,6 +104,8 @@ export class LoginComponent implements OnInit {
 
     this.coreService.register(payload).subscribe({
       next: () => {
+        sessionStorage.setItem('email', this.loginControlForm['email'].value);
+        sessionStorage.setItem('remeberAccess', this.isRememberAccess.toString());
         this.sharedService.showSuccessAdd(`Seja bem vindo <b>${this.registerControlForm['email'].value.split('.')[0]}</b>!`);
         this.router.navigate(['home']);
       },
