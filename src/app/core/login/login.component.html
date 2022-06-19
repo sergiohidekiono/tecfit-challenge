@@ -24,7 +24,7 @@
           </div>
           <div class="pt-3 d-flex justify-content-between">
             <span>
-              <input id="checkfield" type="checkbox" required>
+              <input id="checkfield" type="checkbox" (change)="rememberAccess($event)">
               <label class="form-check-label remember-access">Lembrar o Acesso</label>
             </span>
             <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Esqueceu a senha?</a>

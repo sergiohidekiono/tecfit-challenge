@@ -79,4 +79,9 @@ export class HeaderComponent implements OnInit {
   redirect() {
     this.route.navigateByUrl('/home');
   }
+
+  logout(){
+    sessionStorage.clear();
+    this.route.navigateByUrl('');
+  }
 }
