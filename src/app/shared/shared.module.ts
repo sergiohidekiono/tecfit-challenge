@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './spinner/spinner.component';
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -5,7 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        SpinnerComponent
     ],
     imports: [
         HttpClientModule,
@@ -14,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     exports: [
         HttpClientModule,
         ReactiveFormsModule,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        SpinnerComponent
     ]
 })
 

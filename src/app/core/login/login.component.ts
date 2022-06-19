@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   loginFormGroup: FormGroup;
   registerFormGroup: FormGroup;
   recoveryPasswordFormGroup: FormGroup;
+  isLoading: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,7 +51,6 @@ export class LoginComponent implements OnInit {
   }
 
   validation() {
-    'use strict'
     var forms = document.querySelectorAll('.login-validation')
 
     Array.prototype.slice.call(forms)
@@ -71,6 +71,7 @@ export class LoginComponent implements OnInit {
       password: this.loginControlForm['password'].value,
     };
 
+    this.isLoading = true;
     this.coreService.login(payload).subscribe({
       next: () => {
         sessionStorage.setItem('email', this.loginControlForm['email'].value);
@@ -79,13 +80,12 @@ export class LoginComponent implements OnInit {
       },
       error: (err) => {
         this.sharedService.showErrorAdd(err.error.error);
+        this.isLoading = false;
       },
-      complete: () => { }
+      complete: () => {
+        this.isLoading = false;
+      }
     });
-  }
-
-  rememberPassword() {
-
   }
 
   register() {
@@ -101,8 +101,11 @@ export class LoginComponent implements OnInit {
       },
       error: (err) => {
         this.sharedService.showErrorAdd(err.error.error);
+        this.isLoading = false;
       },
-      complete: () => { }
+      complete: () => {
+        this.isLoading = false;
+      }
     });
   }
 
