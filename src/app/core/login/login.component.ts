@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared/shared.service';
 import { CoreService } from '../core.service';
 
+import * as CryptoJS from 'crypto-js';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -35,11 +37,25 @@ export class LoginComponent implements OnInit {
     });
   }
 
+
+  tokenFromUI: string = "0123456789123456";
+  encrypted: any = "";
+  decrypted!: string;
+
+  request!: string;
+  responce!: string;
+
+  message: any;
+  nonce: any;
+  path: any;
+  privateKey: any;
+
   ngOnInit() {
     this.validation();
-    sessionStorage.getItem('remeberAccess') === 'true' ? this.login() : '';
-
+    // sessionStorage.getItem('remeberAccess') === 'true' ? this.login() : '';
+    // console.log('CRIPTOGRAFIA',CryptoJS.enc.Utf8.parse(this.tokenFromUI));
   }
+
 
   get loginControlForm() {
     return this.loginFormGroup.controls;

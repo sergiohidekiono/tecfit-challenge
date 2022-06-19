@@ -33,5 +33,7 @@ export class SharedService {
         })
     }
 
-
+    encryptPassword(password: any) {
+        return CryptoJS.MD5(password).toString(CryptoJS.enc.Base64);
+    }
 }

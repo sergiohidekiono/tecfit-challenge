@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -11,7 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports: [
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CommonModule
     ],
     exports: [
         HttpClientModule,
