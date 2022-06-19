@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <ul class="d-flex justify-content-between">
     <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
       [ngStyle]="{'cursor': 'pointer'}" />
@@ -8,9 +8,9 @@
       </li>
     </span>
   </ul>
-</div>
+</div> -->
 
-<nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+<nav class="navbar navbar-light navbar-expand-md bg-light fixed-top shadow">
   <div class="container-fluid">
     <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
       [ngStyle]="{'cursor': 'pointer'}" />
@@ -25,7 +25,7 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex">
-          <div class="d-flex">
+          <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div>
               <img class="profile-image" [src]="profile?.avatar" alt="profile man">
             </div>
@@ -35,7 +35,7 @@
               Cargo:<small class="bold"> {{profile?.role}}</small>
             </div>
           </div>
-          <hr style="width:100%">
+          <hr style="width:100%"> -->
           <li class="menu p-0" *ngFor="let menu of menuList" style="align-self: end;">
             <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
           </li>
@@ -44,3 +44,27 @@
     </div>
   </div>
 </nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
+      [ngStyle]="{'cursor': 'pointer'}" />
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->

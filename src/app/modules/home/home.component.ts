@@ -49,22 +49,22 @@ export class HomeComponent implements OnInit {
 
   getSliderStyle(src: any) {
 
-    const mobileSize = window.matchMedia("(max-width: 425px)");
-    if (mobileSize.matches) {
-      return {
-        height: '30vh',
-        background: `url(${src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }
-    } else {
-      return {
-        height: '70vh',
-        background: `url(${src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }
+    return {
+      height: '70vh',
+      background: `url(${src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
     }
+    // const mobileSize = window.matchMedia("(max-width: 425px)");
+    // if (mobileSize.matches) {
+    // } else {
+    //   return {
+    //     height: '70vh',
+    //     background: `url(${src})`,
+    //     backgroundSize: 'cover',
+    //     backgroundPosition: 'center'
+    //   }
+    // }
 
   }
 

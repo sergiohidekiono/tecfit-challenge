@@ -4,8 +4,7 @@
     <p class="h2">Nossos Colaboradores</p>
     <hr>
     <div class="row pt-5">
-      <span class="col-4 p-0 m-3" style="border-radius: 10px; background: grey; max-width: 450px;"
-        *ngFor="let user of users?.data">
+      <span class="wrap-card col-4 p-0 m-3" *ngFor="let user of users?.data">
         <div class="row g-0">
           <div class="col-md-4 profile"
             [ngStyle]="{background: 'url('+user.avatar +')', backgroundSize: 'cover', backgroundPosition: 'center'}">
