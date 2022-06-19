@@ -5,7 +5,7 @@
       [ngStyle]="getSliderStyle(slide.src)"
       *ngFor="let slide of slides; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd">
       <div class="carousel-caption d-sm-block" style="background: #000000a3;">
-        <h1>{{slide.title}}</h1>
+        <h2>{{slide.title}}</h2>
         <hr>
         <p class="p-4 m-0" [ngStyle]="{'font-size': '20px'}">{{slide.content}}</p>
       </div>

@@ -15,8 +15,7 @@
     z-index: -1;
 }
 
-// @media screen and (max-width: 425px) {
-//     .profile-image {
-//         border-radius: 10px;
-//     }
-// }
+.carousel-caption {
+    border-radius: 10px;
+    transform: scale(0.8);
+}

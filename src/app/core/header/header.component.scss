@@ -27,18 +27,19 @@ a {
     font-size: 1.5rem;
 }
 
-::ng-deep a.hvr-underline-from-center:before {
+::ng-deep .hvr-underline-from-center:before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #3155C7;
+    background: red;
     height: 2px;
     transition-property: left, right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+    z-index: 10;
 }
 
 @media screen and (max-width: 576px) {

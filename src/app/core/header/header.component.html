@@ -36,8 +36,12 @@
             </div>
           </div>
           <hr style="width:100%"> -->
-          <li class="menu p-0" *ngFor="let menu of menuList" style="align-self: end;">
-            <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
+          <li class="menu px-3" *ngFor="let menu of menuList" style="align-self: end;">
+            <a class="nav-link" [href]="menu.link">
+              <span class="hvr-underline-from-center">
+                {{menu.description}}
+              </span>
+            </a>
           </li>
         </ul>
       </div>
