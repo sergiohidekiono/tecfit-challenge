@@ -33,8 +33,10 @@ a {
 
 @media screen and (max-width: 576px) {
 
-    .background {
-        overflow: scroll;
+    .wrap-background {
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(10px);
     }
 
     .wrap-login {
