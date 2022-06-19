@@ -30,9 +30,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "assets",
-              "favicon.ico",
-              "_redirects"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"

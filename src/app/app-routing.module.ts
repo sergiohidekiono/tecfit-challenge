@@ -7,8 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
-  { path: 'home', component: HomeComponent},
-  { path: 'user', component: UserComponent},
+  { path: 'home', component: HomeComponent },
+  { path: 'user', component: UserComponent },
   {
     path: '**', pathMatch: 'full',
     component: PageNotFoundComponent
@@ -16,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
