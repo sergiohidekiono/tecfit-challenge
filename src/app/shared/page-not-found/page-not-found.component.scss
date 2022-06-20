@@ -7,7 +7,7 @@
   color: #525252;
 }
 
-svg{
+svg {
   width: 100px;
   height: 100px;
 }
@@ -17,13 +17,15 @@ svg{
   cursor: pointer;
 }
 
-.dumbbell {
+.return {
   fill: #525252;
+  color: #525252;
   cursor: pointer;
 }
 
-.dumbbell:hover {
+.return:hover {
   fill: #979797;
+  color: #979797;
   cursor: pointer;
 }
 

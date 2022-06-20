@@ -48,3 +48,22 @@ a {
         padding: 0;
     }
 }
+
+@media screen and (max-width: 326px) {
+
+    .wrap-background {
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(10px);
+    }
+
+    .wrap-login {
+        width: 90%;
+        font-size: 0.7rem;
+        transform: scale(0.7);
+    }
+
+    .card {
+        padding: 0;
+    }
+}
