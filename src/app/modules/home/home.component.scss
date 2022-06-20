@@ -19,3 +19,10 @@
     border-radius: 10px;
     transform: scale(0.8);
 }
+
+@media screen and (max-width: 576px) {
+
+    .wrap-background {
+        width: 100vw;
+    }
+}
