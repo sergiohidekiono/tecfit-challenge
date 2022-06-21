@@ -4,10 +4,10 @@
     <div class="col-12 carousel-item" [ngClass]="getSliderClass(isFirst, isLast, isEven, isOdd)"
       [ngStyle]="getSliderStyle(slide.src)"
       *ngFor="let slide of slides; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd">
-      <div class="carousel-caption d-sm-block" style="background: #000000a3;">
+      <div class="carousel-caption carousel-content d-sm-block" style="background: #000000a3;">
         <h2>{{slide.title}}</h2>
         <hr>
-        <p class="carousel-content" class="p-4 m-0" [ngStyle]="{'font-size': '20px'}">{{slide.content}}</p>
+        <p class="p-4 m-0" [ngStyle]="{'font-size': '20px'}">{{slide.content}}</p>
       </div>
     </div>
   </div>
