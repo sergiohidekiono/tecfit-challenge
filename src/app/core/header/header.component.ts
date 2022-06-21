@@ -11,9 +11,10 @@ import { UserService } from 'src/app/modules/users/user.service';
 export class HeaderComponent implements OnInit {
 
   menuList: any = [
-    { id: 1, description: 'Home', link: '/home' },
-    { id: 2, description: 'Colaboradores', link: '/user' },
-    { id: 3, description: 'Sobre', link: '/about' }
+    { id: 1, description: 'Home', link: '/home', icon: 'fa-solid fa-house' },
+    { id: 2, description: 'Colaboradores', link: '/user', icon: 'fa-solid fa-users' },
+    { id: 3, description: 'Sobre', link: '/about', icon: 'fa-solid fa-building' },
+    { id: 4, description: 'Sair', icon: 'fa-solid fa-right-from-bracket' },
   ];
 
   users: any;
@@ -23,8 +24,13 @@ export class HeaderComponent implements OnInit {
 
   public windowWidth: any;
   public windowHeight: any;
+  isMobileSize!: boolean;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener("window:resize", [])
+  onResize() {
+    var width = window.innerWidth;
+    this.isMobileSize = width <= 767;
+  }
 
   resizeWindow() {
     this.windowWidth = window.innerWidth;
@@ -41,6 +47,7 @@ export class HeaderComponent implements OnInit {
     if (this.windowWidth <= 425) {
       this.showHamburguerMenu = true;
     }
+    this.onResize();
     this.getUsers();
   }
 
@@ -80,7 +87,7 @@ export class HeaderComponent implements OnInit {
     this.route.navigateByUrl('/home');
   }
 
-  logout(){
+  logout() {
     sessionStorage.clear();
     this.route.navigateByUrl('');
   }

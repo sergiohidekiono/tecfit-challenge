@@ -1,19 +1,7 @@
-<!-- <div class="container-fluid">
-  <ul class="d-flex justify-content-between">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
-      [ngStyle]="{'cursor': 'pointer'}" />
-    <span class="d-flex">
-      <li class="menu" *ngFor="let menu of menuList" style="align-self: end;">
-        <a class="nav-link hvr-underline-from-center" [href]="menu.link">{{menu.description}}</a>
-      </li>
-    </span>
-  </ul>
-</div> -->
-
-<nav class="navbar navbar-light navbar-expand-md bg-light fixed-top shadow">
+<nav class="navbar navbar-light navbar-expand-md bg-light fixed-top shadow p-0">
   <div class="container-fluid">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
-      [ngStyle]="{'cursor': 'pointer'}" />
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-4"
+      style="cursor: pointer;" />
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -25,53 +13,58 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex">
-          <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div>
+          <div *ngIf="isMobileSize">
+            <div class="d-flex">
               <img class="profile-image" [src]="profile?.avatar" alt="profile man">
-            </div>
-            <div class="pl-2 offset-1">
-              Olá, <small class="h-4 bold">{{profile?.name}}</small>!<br><br>
-              E-mail:<small class="bold"> {{profile?.email}}</small>
-              Cargo:<small class="bold"> {{profile?.role}}</small>
+              <div class="profile-information">
+                Olá, <small class="h-4 bold">{{profile?.name}}</small>!<br><br>
+                E-mail:<small class="bold"> {{profile?.email}}</small><br>
+                Cargo:<small class="bold"> {{profile?.role}}</small>
+              </div>
             </div>
           </div>
-          <hr style="width:100%"> -->
-          <li class="menu px-3" *ngFor="let menu of menuList" style="align-self: end;">
-            <a class="nav-link" [href]="menu.link">
-              <span class="hvr-underline-from-center">
-                {{menu.description}}
+          <div class="align-self-center">
+            <div class="d-flex align-items-center">
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle profile-font px-4" role="button" data-bs-toggle="dropdown">
+                      Olá, <span class="h-4 bold">{{profile?.name}}!</span>
+                    </a>
+                    <ul class="dropdown-menu profile-information p-0 profile-font" style="min-width: 400px;">
+                      <span class="p-2 d-flex">
+                        <span>
+                          <img class="profile-image" [src]="profile?.avatar" style="width: 60px;" alt="profile">
+                        </span>
+                        <span class="px-3">
+                          <div>E-mail: <b>{{profile?.email}}</b></div>
+                          <div>Cargo: <b>{{profile?.role}}</b></div>
+                        </span>
+                      </span>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr *ngIf="isMobileSize" style="width:100%">
+          <li class="menu p-0" *ngFor="let menu of menuList; let i = index">
+            <a class="nav-link px-4" [href]="menu.link">
+              <span class="hvr-underline-from-center" [ngClass]="menu.icon">
+                <i class="icon" *ngIf="isMobileSize" [ngClass]="menu.icon"></i>
+                <span *ngIf="isMobileSize" class="px-3">|</span>
+                <span *ngIf="i < menuList.length-1" class="font" style="font-size: 1.3rem;">{{menu.description}}</span>
+                <span *ngIf="i == menuList.length-1">
+                  <i class="icon" *ngIf="!isMobileSize" [ngClass]="menu.icon"></i>
+                  <span *ngIf="isMobileSize" class="font">{{menu.description}}</span>
+                </span>
               </span>
             </a>
           </li>
         </ul>
-        <button type="button" class=" btn btn-link"><i class="fa-solid fa-right-from-bracket" (click)="logout()"></i></button>
       </div>
       <div>
       </div>
     </div>
   </div>
 </nav>
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()"
-      [ngStyle]="{'cursor': 'pointer'}" />
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->

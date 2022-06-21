@@ -1,10 +1,10 @@
-.navbar {
-    position: relative;
-}
-
 .container-fluid {
     color: #6d6d6d;
     padding: 15px;
+}
+
+.navbar {
+    position: relative;
 }
 
 .menu {
@@ -17,14 +17,31 @@ li {
     font-weight: bold;
 }
 
+.font {
+    font-family: "BlackRange", sans-serif;
+}
+
 .profile-image {
     width: 100px;
     border-radius: 10px;
 }
 
+.profile-font {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: system-ui;
+    color: #6d6d6d !important;
+}
+
 a {
     color: #3155C7 !important;
     font-size: 1.5rem;
+}
+
+.icon {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
 }
 
 ::ng-deep .hvr-underline-from-center:before {
@@ -50,5 +67,13 @@ a {
 
     img {
         width: 30%;
+    }
+
+    .profile-information {
+        font-size: 0.9rem;
+        background: #f0f0f0;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0 10px;
     }
 }
