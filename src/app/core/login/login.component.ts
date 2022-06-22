@@ -37,25 +37,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-  tokenFromUI: string = "0123456789123456";
-  encrypted: any = "";
-  decrypted!: string;
-
-  request!: string;
-  responce!: string;
-
-  message: any;
-  nonce: any;
-  path: any;
-  privateKey: any;
-
   ngOnInit() {
     this.validation();
-    // sessionStorage.getItem('remeberAccess') === 'true' ? this.login() : '';
-    // console.log('CRIPTOGRAFIA',CryptoJS.enc.Utf8.parse(this.tokenFromUI));
   }
-
 
   get loginControlForm() {
     return this.loginFormGroup.controls;
@@ -120,7 +104,7 @@ export class LoginComponent implements OnInit {
 
     this.coreService.register(payload).subscribe({
       next: () => {
-        sessionStorage.setItem('email', this.loginControlForm['email'].value);
+        sessionStorage.setItem('email', this.registerControlForm['email'].value);
         sessionStorage.setItem('remeberAccess', this.isRememberAccess.toString());
         this.sharedService.showSuccessAdd(`Seja bem vindo <b>${this.registerControlForm['email'].value.split('.')[0]}</b>!`);
         this.router.navigate(['home']);
