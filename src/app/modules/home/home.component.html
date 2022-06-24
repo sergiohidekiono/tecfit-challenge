@@ -1,25 +1,54 @@
-<app-header></app-header>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner" style="max-width: 100%; max-height: 70vh;">
-    <div class="col-12 carousel-item" [ngClass]="getSliderClass(isFirst, isLast, isEven, isOdd)"
-      [ngStyle]="getSliderStyle(slide.src)"
-      *ngFor="let slide of slides; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd">
-      <div class="carousel-caption carousel-content d-sm-block" style="background: #000000a3;">
-        <h2>{{slide.title}}</h2>
-        <hr>
-        <p class="p-4 m-0" [ngStyle]="{'font-size': '20px'}">{{slide.content}}</p>
+<app-header class="header"></app-header>
+<section class="main-section">
+  <img src="../../../assets/images/home/background.jpg" alt="main background">
+</section>
+<section>
+  Nossas modalidades
+  <div>
+    <span style="background: #2c2c2c; color: white;">
+      <div>Musculação</div>
+      <img src="../../../assets/images/home/icon-musculacao.svg" style="width:80px; height: 80px;" alt="crossfit icon">
+    </span>
+    <span style="background: #2c2c2c; color: white;">
+      <div>Crossfit</div>
+      <img src="../../../assets/images/home/icon-crossfit.svg" style="width:80px; height: 80px;" alt="crossfit icon">
+    </span>
+    <span style="background: #2c2c2c; color: white;">
+      <div>Artes</div>
+      <img src="../../../assets/images/home/icon-artes-marciais.svg" style="width:80px; height: 80px;" alt="crossfit icon">
+    </span>
+    <span style="background: #2c2c2c; color: white;">
+      <div>Pilates</div>
+      <img src="../../../assets/images/home/icon-pilates.svg" style="width:80px; height: 80px;" alt="crossfit icon">
+    </span>
+  </div>
+</section>
+<section>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="col-12 carousel-item" [ngClass]="getSliderClass(isFirst, isLast, isEven, isOdd)"
+        [ngStyle]="getSliderStyle(slide.src)"
+        *ngFor="let slide of slides; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd">
+        <div class="carousel-caption carousel-content d-sm-block" style="background: #000000a3;">
+          <h2>{{slide.title}}</h2>
+          <hr>
+          <p class="p-4 m-0" [ngStyle]="{'font-size': '20px'}">{{slide.content}}</p>
+        </div>
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="wrap-control">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="wrap-control">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="wrap-control">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="wrap-control">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </span>
-  </button>
-</div>
-
+</section>
+<section>
+</section>

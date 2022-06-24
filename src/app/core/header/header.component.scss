@@ -1,9 +1,9 @@
 .container-fluid {
-    color: #6d6d6d;
     padding: 15px;
 }
 
 .navbar {
+    background: transparent !important;
     position: relative;
 }
 
@@ -30,11 +30,15 @@ li {
     font-size: 14px;
     font-weight: 400;
     font-family: system-ui;
+    color: white !important;
+}
+
+.profile-content {
     color: #6d6d6d !important;
 }
 
 a {
-    color: #6d6d6d !important;
+    color: white !important;
     font-size: 1.5rem;
 }
 
@@ -59,7 +63,7 @@ a {
     z-index: 10;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 
     button {
         font-size: 12px;

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-light navbar-expand-md bg-light fixed-top shadow p-0">
+<nav class="navbar navbar-light navbar-expand-md bg-light fixed-top p-0">
   <div class="container-fluid">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-4"
+    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
       style="cursor: pointer;" />
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar">
@@ -36,7 +36,7 @@
                         <span>
                           <img class="profile-image" [src]="profile?.avatar" style="width: 60px;" alt="profile">
                         </span>
-                        <span class="px-3">
+                        <span class="px-3 profile-content">
                           <div>E-mail: <b>{{profile?.email}}</b></div>
                           <div>Cargo: <b>{{profile?.role}}</b></div>
                         </span>
