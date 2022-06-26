@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light navbar-expand-md bg-light fixed-top p-0">
   <div class="container-fluid">
-    <img *ngIf="isMobileSize" src="../../../assets/images/header/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
-      style="cursor: pointer;" />
-    <img *ngIf="!isMobileSize" src="../../../assets/images/header/logo-desktop.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
-      style="cursor: pointer;" />
+    <img *ngIf="isMobileSize" src="../../../assets/images/header/logo.svg" alt="logo" width="150" (click)="redirect()"
+      class="px-3" style="cursor: pointer;" />
+    <img *ngIf="!isMobileSize" src="../../../assets/images/header/logo-desktop.svg" alt="logo" width="150"
+      (click)="redirect()" class="px-3" style="cursor: pointer;" />
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,8 @@
             <div class="d-flex">
               <img class="profile-image" [src]="profile?.avatar" alt="profile man">
               <div class="profile-information">
-                Olá, <small class="h-4 bold">{{profile?.name}}</small>!<br><br>
+                Olá, <small class="h-4 bold">{{profile?.name}}</small>!
+                <hr>
                 E-mail:<small class="bold"> {{profile?.email}}</small><br>
                 Cargo:<small class="bold"> {{profile?.role}}</small>
               </div>
@@ -36,9 +37,11 @@
                     <ul class="dropdown-menu profile-information p-0 profile-font" style="min-width: 400px;">
                       <span class="p-2 d-flex">
                         <span>
-                          <img class="profile-image" [src]="profile?.avatar" style="width: 60px;" alt="profile">
+                          <img class="profile-image" [src]="profile?.avatar" style="width: 95px;" alt="profile">
                         </span>
                         <span class="px-3 profile-content">
+                          Olá, <small class="h-4 bold">{{profile?.name}}</small>!
+                          <hr>
                           <div>E-mail: <b>{{profile?.email}}</b></div>
                           <div>Cargo: <b>{{profile?.role}}</b></div>
                         </span>
