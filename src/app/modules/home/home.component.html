@@ -1,29 +1,21 @@
 <app-header class="header"></app-header>
-<section class="main-section">
-  <img src="../../../assets/images/home/background.jpg" alt="main background">
+<section class="first-section">
+  <img src="../../../assets/images/home/first-section/background.jpg" alt="main background">
 </section>
-<section>
-  Nossas modalidades
-  <div>
-    <span style="background: #2c2c2c; color: white;">
-      <div>Musculação</div>
-      <img src="../../../assets/images/home/icon-musculacao.svg" style="width:80px; height: 80px;" alt="crossfit icon">
-    </span>
-    <span style="background: #2c2c2c; color: white;">
-      <div>Crossfit</div>
-      <img src="../../../assets/images/home/icon-crossfit.svg" style="width:80px; height: 80px;" alt="crossfit icon">
-    </span>
-    <span style="background: #2c2c2c; color: white;">
-      <div>Artes</div>
-      <img src="../../../assets/images/home/icon-artes-marciais.svg" style="width:80px; height: 80px;" alt="crossfit icon">
-    </span>
-    <span style="background: #2c2c2c; color: white;">
-      <div>Pilates</div>
-      <img src="../../../assets/images/home/icon-pilates.svg" style="width:80px; height: 80px;" alt="crossfit icon">
-    </span>
+<section class="second-section pt-5">
+  <span class="text-center">
+    <h1 style="font-family: 'Tourgate'">
+      Nossas <span style="color: #E43131">modalidades</span>
+    </h1>
+  </span>
+  <div class="row col-12"> 
+    <div class="col-3 text-center" *ngFor="let icon of icons">
+      <img class="col-12" [src]="icon.src" [alt]="icon.alt" style="max-width: 142px;">
+      <div class="col-12">{{icon.title}}</div>
+    </div>
   </div>
 </section>
-<section>
+<section class="third-section">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="col-12 carousel-item" [ngClass]="getSliderClass(isFirst, isLast, isEven, isOdd)"
@@ -50,5 +42,51 @@
     </button>
   </div>
 </section>
-<section>
+<section class="fourth-section pt-5">
+  <span class="text-center">
+    <h1 style="font-family: 'Tourgate'">
+      <span style="color: #E43131">Fatos</span> curiosos
+    </h1>
+  </span>
+  <div class="row col-12">
+    <span class="col-6 p-3">
+      <img class="fourth-image" src="../../../assets/images/home/fourth-section/alimentacao.png" alt="foto alimentação">
+    </span>
+    <span class="col-6 p-3">
+      <h2>Qual a relação entre Alimentação e Atividade Física?</h2>
+      <p>É importante destacar que a nutrição correta garante maior rendimento para seus treinos. Além de reduzir a
+        fadiga, auxilia no período de recuperação e diminui o risco de lesões. Em síntese, quem não se alimenta bem e de
+        forma estratégica corre o risco de prejudicar a recuperação muscular após os exercícios.</p>
+    </span>
+  </div>
+  <div class="row col-12">
+    <span class="col-6 p-3">
+      <h2>Quais benefícios da Atividade Física?</h2>
+      <p>A prática regular de atividade física é capaz de melhorar a circulação sanguínea, fortalecer o sistema
+        imunológico, ajudar a emagrecer, diminuir o risco de doenças cardíacas e fortalecer os ossos, por exemplo. Esses
+        benefícios podem ser alcançados em cerca de 1 mês após o início da atividade física regular, como caminhadas,
+        pular corda, correr, dançar ou praticar musculação.</p>
+    </span>
+    <span class="col-6 p-3">
+      <img class="fourth-image" src="../../../assets/images/home/fourth-section/atividade.png"
+        alt="foto atividade física">
+    </span>
+  </div>
+  <div class="row col-12">
+    <span class="col-6 p-3">
+      <img class="fourth-image" src="../../../assets/images/home/fourth-section/sono.png" alt="foto sono">
+    </span>
+    <span class="col-6 p-3">
+      <h2>Qual a relação da Atividade Física e o Sono?</h2>
+      <p>Os distúrbios do sono afetam cerca de 45% da população mundial. Noites mal dormidas reduzem a concentração,
+        diminuem a produtividade e podem causar doenças como hipertensão e diabetes. A boa notícia é que é possível
+        combatê-los com uma rotina de exercícios físicos. Cerca de 10 minutos diários de atividades aeróbicas como
+        corrida, pedalada ou mesmo caminhadas já são suficientes para evitar distúrbios do sono.</p>
+    </span>
+  </div>
 </section>
+
+<button *ngIf="isScroll == true" (click)="scrollTop()" mat-fab color="accent"
+  class="button-scroll-top position-fixed hvr-icon-bob">
+  <button class="hvr-icon">Teste</button>
+</button>
