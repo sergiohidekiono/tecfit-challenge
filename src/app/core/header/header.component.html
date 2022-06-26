@@ -1,6 +1,8 @@
 <nav class="navbar navbar-light navbar-expand-md bg-light fixed-top p-0">
   <div class="container-fluid">
-    <img src=" ../../../../../assets/images/login/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
+    <img *ngIf="isMobileSize" src="../../../assets/images/header/logo.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
+      style="cursor: pointer;" />
+    <img *ngIf="!isMobileSize" src="../../../assets/images/header/logo-desktop.svg" alt="logo" width="150" (click)="redirect()" class="px-3"
       style="cursor: pointer;" />
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar">

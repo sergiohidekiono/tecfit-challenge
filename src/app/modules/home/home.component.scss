@@ -10,11 +10,18 @@
 .second-section {
   background: #000;
   color: #fff;
+  padding: 100px;
 }
 
 .fourth-section {
   background: #000;
   color: #fff;
+  padding: 100px;
+}
+
+.curiosities {
+  display: flex;
+  justify-content: space-between;
 }
 
 .curiosities:nth-child(2n) {
@@ -67,6 +74,32 @@
   font-family: 'PermanentMarker';
 }
 
+.second-section-title {
+  padding: 0 20px;
+  font-family: 'Tourgate';
+  font-size: 3rem;
+}
+
+.second-section-icons {
+  text-align: center;
+}
+
+.fourth-section-image-wrap {
+  padding: 20px;
+  min-width: 700px;
+}
+
+.fourth-section-title {
+  padding: 40px 0;
+  font-family: 'Tourgate';
+  font-size: 3rem;
+}
+
+.curiosity-content {
+  font-weight: bold;
+  padding-top: 40px;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     position: relative;
@@ -80,4 +113,45 @@
     transform: scale(0.6);
   }
 
+  .fourth-section {
+    padding: 50px;
+  }
+
+  .curiosities {
+    display: block;
+  }
+
+  .second-section {
+    padding: 50px;
+  }
+
+  .second-section-title {
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .second-section-icons {
+    padding: 40px;
+  }
+
+  .fourth-section-title {
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .fourth-section-image-wrap {
+    padding: 0px;
+  }
+
+  .fourth-image {
+    padding: 40px;
+  }
+
+  .curiosity-title {
+    padding: 20px;
+  }
+
+  .curiosity-content {
+    padding: 20px;
+  }
 }

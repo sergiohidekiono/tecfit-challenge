@@ -3,16 +3,16 @@
   <section class="first-section">
     <img src="../../../assets/images/home/first-section/background.jpg" alt="main background">
   </section>
-  <section class="second-section" style="padding: 100px;">
+  <section class="second-section">
     <span class="text-center d-flex justify-content-between">
-      <hr style="width: 30%; align-self: center; color: #fff;">
-      <h1 class="px-4" style="font-family: 'Tourgate'; font-size: 3rem;">
+      <hr style="width: 30%; align-self: center;">
+      <h1 class="second-section-title">
         Nossas <span style="color: #E43131">modalidades</span>
       </h1>
-      <hr style="width: 30%; align-self: center; color: #fff;">
+      <hr style="width: 30%; align-self: center;">
     </span>
     <div class="row col-12" style="height: 400px; display: flex; align-content: space-around;">
-      <div class="col-3 text-center" *ngFor="let icon of icons">
+      <div class="col-6 col-md-3 second-section-icons" *ngFor="let icon of icons">
         <img class="col-12" [src]="icon.src" [alt]="icon.alt" style="max-width: 142px;">
         <div class="col-12 pt-2 icon-title" style="font-size: 1.3rem;">{{icon.title}}</div>
       </div>
@@ -45,21 +45,21 @@
       </button>
     </div>
   </section>
-  <section class="fourth-section" style="padding: 100px;">
+  <section class="fourth-section">
     <span class="text-center d-flex justify-content-between">
       <hr style="width: 30%; align-self: center;">
-      <h1 style="font-family: 'Tourgate'; font-size: 3rem;">
+      <h1 class="fourth-section-title">
         <span style="color: #E43131">Fatos</span> curiosos
       </h1>
       <hr style="width: 30%; align-self: center;">
     </span>
-    <div class="col-12 d-flex justify-content-between" *ngFor="let curiosity of curiosities">
-      <span class="p-5">
-        <img class="fourth-image" [src]="curiosity.src" [alt]="curiosity.alt">
+    <div class="col-12 curiosities" *ngFor="let curiosity of curiosities">
+      <span class="fourth-section-image-wrap">
+        <img class="col-12 fourth-image" [src]="curiosity.src" [alt]="curiosity.alt">
       </span>
       <span class="p-5">
         <div class="curiosity-title">{{curiosity.title}}</div>
-        <p class="bold pt-5">{{curiosity.content}}</p>
+        <p class="curiosity-content">{{curiosity.content}}</p>
       </span>
     </div>
   </section>
