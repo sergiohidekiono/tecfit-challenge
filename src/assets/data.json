@@ -1,0 +1,77 @@
+{
+  "icons": [
+    {
+      "id": 1,
+      "src": "../../../assets/images/home/second-section/1.png",
+      "title": "Crossfit",
+      "alt": "icon crossfit"
+    },
+    {
+      "id": 2,
+      "src": "../../../assets/images/home/second-section/2.png",
+      "title": "Musculação",
+      "alt": "icon musculação"
+    },
+    {
+      "id": 3,
+      "src": "../../../assets/images/home/second-section/3.png",
+      "title": "Pilates",
+      "alt": "icon pilates"
+    },
+    {
+      "id": 4,
+      "src": "../../../assets/images/home/second-section/4.png",
+      "title": "Artes marciais",
+      "alt": "icon arte marciais"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "src": "../../../assets/images/home/third-section/1.jpg",
+      "title": "Crossfit",
+      "content": "O objetivo do Crossfit é potencializar todas as principais capacidades físicas do ser humano, como a resistência respiratória e cardiovascular, a resistência muscular, a flexibilidade, força, coordenação, potência, agilidade, equilíbrio e velocidade."
+    },
+    {
+      "id": 2,
+      "src": "../../../assets/images/home/third-section/2.jpg",
+      "title": "Musculação",
+      "content": "É uma modalidade de treinamento físico realizado contra resistência de pesos externos, chamada também de treino resistido, que tem como objetivo o aumento hipertrofia muscular, ganho de força e potência."
+    },
+    {
+      "id": 3,
+      "src": "../../../assets/images/home/third-section/3.jpg",
+      "title": "Pilates",
+      "content": "É um treinamento contra-resistência que tem como objetivo proporcionar a melhoria do condicionamento físico e do bem-estar do praticante. Sendo assim, esse exercício promove força, flexibilidade, equilíbrio, controle corporal, entre outros benefícios."
+    },
+    {
+      "id": 4,
+      "src": "../../../assets/images/home/third-section/4.jpg",
+      "title": "Artes marciais",
+      "content": "São disciplinas físicas e mentais codificadas em diferentes graus, que tem como objetivo um alto desenvolvimento de seus praticantes para que possam defender-se ou submeter o adversário mediante diversas técnicas."
+    }
+  ],
+  "curiosities": [
+    {
+      "id": 1,
+      "src": "../../../assets/images/home/fourth-section/alimentacao.png",
+      "alt": "foto alimentação",
+      "title": "Qual a relação entre Alimentação e Atividade Física?",
+      "content": "É importante destacar quea nutrição correta garante maior rendimento para seus treinos. Além de reduzir a fadiga, auxilia no período de recuperação e diminui o risco de lesões. Em síntese, quem não se alimenta bem e de forma estratégica corre o risco de prejudicar a recuperação muscular após os exercícios."
+    },
+    {
+      "id": 2,
+      "src": "../../../assets/images/home/fourth-section/atividade.png",
+      "alt": "foto atividade física",
+      "title": "Quais benefícios da Atividade Física?",
+      "content": "A prática regular de atividade física é capaz de melhorar a circulação sanguínea, fortalecer o sistema imunológico, ajudar a emagrecer, diminuir o risco de doenças cardíacas e fortalecer os ossos, por exemplo. Esses benefícios podem ser alcançados em cerca de 1 mês após o início da atividade física regular, como caminhadas, pular corda, correr, dançar ou praticar musculação."
+    },
+    {
+      "id": 3,
+      "src": "../../../assets/images/home/fourth-section/sono.png",
+      "alt": "foto sono",
+      "title": "Qual a relação da Atividade Física e o Sono?",
+      "content": "Os distúrbios do sono afetam cerca de 45% da população mundial. Noites mal dormidas reduzem a concentração, diminuem a produtividade e podem causar doenças como hipertensão e diabetes. A boa notícia é que é possível combatê-los com uma rotina de exercícios físicos. Cerca de 10 minutos diários de atividades aeróbicas como corrida, pedalada ou mesmo caminhadas já são suficientes para evitar distúrbios do sono."
+    }
+  ]
+}

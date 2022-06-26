@@ -1,38 +1,43 @@
 @font-face {
-    font-family: 'BlackRange';
-    src: url('./assets/fonts/black-range.ttf') format("opentype");
+  font-family: 'BlackRange';
+  src: url('./assets/fonts/black-range.ttf') format("opentype");
 }
 
 @font-face {
-    font-family: 'EveryroseSlant';
-    src: url('./assets/fonts/everyrose-slant.otf') format("opentype");
+  font-family: 'EveryroseSlant';
+  src: url('./assets/fonts/everyrose-slant.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'Fanybrush';
-    src: url('./assets/fonts/fany-brush.ttf') format("opentype");
+  font-family: 'Fanybrush';
+  src: url('./assets/fonts/fany-brush.ttf') format("opentype");
 }
 
 @font-face {
-    font-family: 'Greatbrush';
-    src: url('./assets/fonts/great-brush.ttf') format("opentype");
+  font-family: 'Greatbrush';
+  src: url('./assets/fonts/great-brush.ttf') format("opentype");
 }
 
 @font-face {
-    font-family: 'StormGust';
-    src: url('./assets/fonts/storm-gust.ttf') format("opentype");
+  font-family: 'StormGust';
+  src: url('./assets/fonts/storm-gust.ttf') format("opentype");
 }
 
 @font-face {
-    font-family: 'TheDeliver';
-    src: url('./assets/fonts/the-deliver.otf') format("opentype");
+  font-family: 'TheDeliver';
+  src: url('./assets/fonts/the-deliver.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'TheJupines';
-    src: url('./assets/fonts/the-jupines.ttf') format("opentype");
+  font-family: 'TheJupines';
+  src: url('./assets/fonts/the-jupines.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: 'PermanentMarker';
+  src: url('./assets/fonts/permanent-marker.ttf') format("opentype");
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }

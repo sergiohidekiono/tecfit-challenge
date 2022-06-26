@@ -56,7 +56,6 @@ export class HeaderComponent implements OnInit {
     this.userService.getUsers(payload).subscribe({
       next: (res) => {
         this.users = res;
-        console.log('USRS: ',this.users)
         this.users.data.forEach((user: any, index: any) => {
           if (this.emailLogin === user.email) {
             if (index === 1 || index === 2 || index === 6 || index === 11) {

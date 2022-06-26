@@ -6,16 +6,20 @@ import { environment } from 'src/environments/environment';
 const endPoint = environment.endPoints.login;
 
 const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable({ providedIn: 'root' })
 
 export class HomeService {
 
-    constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-    listUsers(perPage: string): Observable<any> {
-        return this.httpClient.get<any>(`${endPoint}/users?per_page=${perPage}`, httpOptions);
-    }
+  listUsers(perPage: string): Observable<any> {
+    return this.httpClient.get<any>(`${endPoint}/users?per_page=${perPage}`, httpOptions);
+  }
+
+  getDataJSON() {
+    return this.httpClient.get('../../../assets/data.json');
+  }
 }
