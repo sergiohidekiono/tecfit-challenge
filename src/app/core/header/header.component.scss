@@ -48,19 +48,19 @@ a {
     width: 25px;
 }
 
-::ng-deep .hvr-underline-from-center:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 51%;
-    right: 51%;
-    bottom: 0;
-    background: red;
-    height: 2px;
-    transition-property: left, right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    z-index: 10;
+ul a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+ul a:hover::after,
+ul a:focus::after {
+    transform: scale(1);
+}
+
+.item-nav:hover {
+    color: #E43131;
 }
 
 @media screen and (max-width: 768px) {

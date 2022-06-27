@@ -32,11 +32,6 @@ export class HeaderComponent implements OnInit {
     this.isMobileSize = width <= 767;
   }
 
-  resizeWindow() {
-    this.windowWidth = window.innerWidth;
-    this.windowHeight = window.innerHeight;
-  }
-
   constructor(
     private route: Router,
     private userService: UserService

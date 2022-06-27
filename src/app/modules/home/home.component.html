@@ -2,9 +2,17 @@
 <div id="demo">
   <section class="first-section">
     <img src="../../../assets/images/home/first-section/background.jpg" alt="main background">
+    <div class="show-scroll-down pt-3">
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+      <span class="text">
+        Scroll <span class="gradient">down</span>
+      </span>
+    </div>
   </section>
   <section class="second-section">
-    <span class="text-center d-flex justify-content-between">
+    <span class="wrap-title">
       <hr style="width: 30%; align-self: center;">
       <h1 class="second-section-title">
         Nossas <span style="color: #E43131">modalidades</span>
@@ -12,7 +20,8 @@
       <hr style="width: 30%; align-self: center;">
     </span>
     <div class="row col-12" style="height: 400px; display: flex; align-content: space-around;">
-      <div class="col-6 col-md-3 second-section-icons" *ngFor="let icon of icons">
+      <div class="col-6 col-md-3 second-section-icons" *ngFor="let icon of icons" data-aos="fade-zoom-in"
+        data-aos-offset="100" data-aos-easing="ease-in-out-sine" data-aos-duration="1000">
         <img class="col-12" [src]="icon.src" [alt]="icon.alt" style="max-width: 142px;">
         <div class="col-12 pt-2 icon-title" style="font-size: 1.3rem;">{{icon.title}}</div>
       </div>
@@ -53,7 +62,8 @@
       </h1>
       <hr style="width: 30%; align-self: center;">
     </span>
-    <div class="col-12 curiosities" *ngFor="let curiosity of curiosities">
+    <div class="col-12 curiosities" *ngFor="let curiosity of curiosities" data-aos="fade-right" data-aos-duration="1000"
+      data-aos-easing="ease-in-out">
       <span class="fourth-section-image-wrap">
         <img class="col-12 fourth-image" [src]="curiosity.src" [alt]="curiosity.alt">
       </span>

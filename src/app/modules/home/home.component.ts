@@ -1,6 +1,7 @@
 import { HomeService } from './home.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -41,6 +42,7 @@ export class HomeComponent implements OnInit {
       this.icons = res.icons;
       this.curiosities = res.curiosities;
     });
+    AOS.init();
   }
 
   scrollTop(): any {

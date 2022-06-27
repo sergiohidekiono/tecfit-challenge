@@ -4,8 +4,27 @@
     <p class="h2" style="color: #fff;">Nossos Colaboradores</p>
     <hr>
     <div class="row pt-5">
-      <span class="wrap-card col-12 col-sm-8 col-md-6 col-lg-4 p-0 m-3" *ngFor="let user of users?.data" style="color: #fff; background: #000;">
-        <div class="row g-0">
+      <span class="wrap-card col-12 col-sm-8 col-md-6 col-lg-4 p-0 m-3" *ngFor="let user of users?.data"
+        style="color: #fff; background: #000;">
+        <div *ngIf="!isMobileSize" class="row g-0" data-aos="fade-zoom-in" data-aos-offset="100"
+          data-aos-easing="ease-in-out-sine" data-aos-duration="1000">
+          <img class="image" [src]="user.avatar">
+          <div class="col p-2">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+              <p class="card-text">E-mail: <b>{{user.email}}</b></p>
+              <hr>
+              <span style="font-size: x-large;">
+                <a class="fa-brands fa-facebook-square cursor" href="https://www.facebook.com" target="_blank"></a>
+                <a class="fa-brands fa-twitter-square cursor" style="margin: 0 10px;" href="https://www.twitter.com"
+                  target="_blank"></a>
+                <a class="fa-brands fa-linkedin cursor" href="https://www.linkedin.com" target="_blank"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="isMobileSize" class="row g-0" data-aos="slide-right" data-aos-offset="100"
+          data-aos-easing="ease-in-out-sine" data-aos-duration="1000">
           <img class="image" [src]="user.avatar">
           <div class="col p-2">
             <div class="card-body">

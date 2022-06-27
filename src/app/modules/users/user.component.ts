@@ -1,6 +1,7 @@
 import { UserService } from './user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared/shared.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-user',
@@ -11,6 +12,14 @@ export class UserComponent implements OnInit {
 
   users: any;
 
+  isMobileSize!: boolean;
+
+  @HostListener("window:resize", [])
+  onResize() {
+    var width = window.innerWidth;
+    this.isMobileSize = width <= 767;
+  }
+
   constructor(
     private userService: UserService,
     private sharedService: SharedService
@@ -18,6 +27,8 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
+    AOS.init();
+    this.onResize();
   }
 
   getUsers() {
