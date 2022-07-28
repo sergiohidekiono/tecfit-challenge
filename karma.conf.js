@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/tecnofit-challenge'),
+      dir: require('path').join(__dirname, './coverage/tecfit-challenge'),
       subdir: '.',
       reporters: [
         { type: 'html' },
