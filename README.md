@@ -1,5 +1,5 @@
-# tecnofit-challenge
-Challenge TecnoFit
+# tecfit-challenge
+Challenge TecFit
 
 Criar formulário de login com os seguintes campos:
 

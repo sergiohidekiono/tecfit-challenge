@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tecnofit-challenge": {
+    "tecfit-challenge": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tecnofit-challenge",
+            "outputPath": "dist/tecfit-challenge",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tecnofit-challenge:build:production"
+              "browserTarget": "tecfit-challenge:build:production"
             },
             "development": {
-              "browserTarget": "tecnofit-challenge:build:development"
+              "browserTarget": "tecfit-challenge:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tecnofit-challenge:build"
+            "browserTarget": "tecfit-challenge:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "tecnofit-challenge"
+  "defaultProject": "tecfit-challenge"
 }
