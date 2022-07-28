@@ -31,6 +31,15 @@ a {
     cursor: pointer;
 }
 
+.footer {
+    color: #fff;
+    text-align: right;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
     .wrap-background {
@@ -47,5 +56,10 @@ a {
 
     .card {
         padding: 0;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        text-align: center;
     }
 }
